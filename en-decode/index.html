@@ -1,1 +1,286 @@
-<!DOCTYPE html><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width">    <title>编码转换 - Online Tools</title>    <link rel="stylesheet" href="../css/mdui.min.css"/>    <link rel="stylesheet" href="../css/docs.min.css"/>    <link rel="stylesheet" href="../css/materiality.min.css"/>    <link rel="stylesheet" href="../css/font-awesome.min.css"/>    <link rel="stylesheet" href="./index.css"/>    <script type="text/javascript" src="../js/vue.js"></script>    <script src="../js/require.js"></script>    <script src="../js/mdui.min.js"></script>    <script src="../js/darkmode.min.js"></script></head><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-192868662-2"></script><script>    window.dataLayer = window.dataLayer || [];    function gtag(){dataLayer.push(arguments);}    gtag('js', new Date());    gtag('config', 'UA-192868662-2');</script><body class="mdui-drawer-body-left mdui-appbar-with-toolbar  mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-light"><header class="mdui-appbar mdui-appbar-fixed">    <div class="mdui-toolbar mdui-color-theme">        <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"              mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon fa fa-bars"></i></span>        <a href="https://www.zjun.info" class="mdui-typo-headline mdui-hidden-xs">ZJUN</a>        <a href="../" class="mdui-typo-title">online tools</a>        <div class="mdui-toolbar-spacer"></div>        <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" id="dark_toggle_btn"              mdui-tooltip="{content: '暗色模式'}" onclick="toggleDark()"><i class="mdui-icon fa fa-adjust"                                                                         id="dark_toggle_icon"></i></span>        <a href="https://github.com/z1un" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"           mdui-tooltip="{content: 'Github'}"><i class="mdui-icon fa fa-github"></i>            <a href="https://www.zjun.info" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"               mdui-tooltip="{content: 'ZJUN'}"><i class="mdui-icon fa fa-user-circle-o"></i>            </a>        </a>    </div></header><style>    .mdui-row > [class*="mdui-col-"] {        padding-top: 15px;        padding-bottom: 10px;        margin-bottom: 8px;    }    .mdui-col-xs-2 {        width: auto    }</style><div class="mdui-drawer" id="main-drawer">    <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">        <div class="mdui-collapse-item mdui-collapse-item-open">            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">                <i class="mdui-list-item-icon mdui-icon mdui-text-color-blue fa fa-briefcase"></i>                <div class="mdui-list-item-content">前端工具</div>                <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>            </div>            <div class="mdui-collapse-item-body mdui-list">                <a href="./" class="mdui-list-item mdui-ripple mdui-list-item-active">编码转换</a>            </div>            <div class="mdui-collapse-item-body mdui-list">                <a href="../code-beautify" class="mdui-list-item mdui-ripple">代码美化</a>            </div>            <div class="mdui-collapse-item-body mdui-list">                <a href="../image-base64" class="mdui-list-item mdui-ripple">图片-Base64</a>            </div>            <div class="mdui-collapse-item-body mdui-list">                <a href="../qr-code" class="mdui-list-item mdui-ripple">二维码生成</a>            </div>        </div>        <div class="mdui-collapse-item ">            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">                <i class="mdui-list-item-icon mdui-icon mdui-text-color-green fa fa-cube"></i>                <div class="mdui-list-item-content">安全工具</div>                <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>            </div>            <div class="mdui-collapse-item-body mdui-list">                <a href="../googlehacking" class="mdui-list-item mdui-ripple ">Google Hacking</a>                <a href="../getav" class="mdui-list-item mdui-ripple ">Windows杀软识别</a>                <a href="../getmskb" class="mdui-list-item mdui-ripple ">Winodws提权辅助</a>            </div>        </div>        <div class="mdui-collapse-item ">            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">                <i class="mdui-list-item-icon mdui-icon mdui-text-color-brown fa fa-font-awesome"></i>                <div class="mdui-list-item-content">特别感谢</div>                <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>            </div>            <div class="mdui-collapse-item-body">                <a href="https://github.com/r00tSe7en/GoogleHackingTool" class="mdui-list-item mdui-ripple"                   target="_blank">GoogleHackingTool</a>                <a href="https://github.com/r00tSe7en/get_AV" class="mdui-list-item mdui-ripple"                   target="_blank">get_AV</a>                <a href="https://github.com/gh0stkey/peAssist" class="mdui-list-item mdui-ripple" target="_blank">peAssist</a>                <a href="https://github.com/gh0stkey/avList" class="mdui-list-item mdui-ripple"                   target="_blank">avList</a>                <a href="https://github.com/zxlie/FeHelper" class="mdui-list-item mdui-ripple"                   target="_blank">FeHelper</a>                <a href="https://www.mdui.org" target="_blank" class="mdui-list-item mdui-ripple">MDUI</a>                <a href="https://github.com/EAimTY/materiality-typecho-theme"                   target="_blank" class="mdui-list-item mdui-ripple">materiality-typecho-theme</a>            </div>        </div>        <div class="mdui-collapse-item">            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">                <i class="mdui-list-item-icon mdui-icon mdui-text-color-deep-orange fa fa-link"></i>                <div class="mdui-list-item-content">友情链接</div>                <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>            </div>            <div class="mdui-collapse-item-body">                <a href="https://www.zjun.info" class="mdui-list-item mdui-ripple" target="_blank">zjun</a>                <a href="https://blog.zjun.info" class="mdui-list-item mdui-ripple" target="_blank">zjun's blog</a>            </div>        </div>    </div></div><div class="page-content">    <div class="mdui-container" id="main">        <div class="mdui-typo">            <center><h1>编码转换</h1></center>        </div>        <div class="wrapper" id="pageContainer">            <div class="panel-body mod-endecode">                <div class="mdui-row">                    <div class="mdui-textfield">                    <textarea class="mdui-textfield-input" rows="8" id="srcText" ref="srcText" v-model="sourceContent"                              placeholder="粘贴需要进行转换的字符串"></textarea>                    </div>                    <br>                    <input id="btnCodeClear" class="mdui-btn mdui-color-theme-accent mdui-ripple" type="button"                           value="清空" @click="clear()">                    <input id="btnCodeChange" class="mdui-btn mdui-color-theme-accent mdui-ripple" type="button"                           value="转换" @click="convert()">                    <div class="mdui-row">                        <div class="mdui-col-xs-2">                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="uniEncode"                                                                 v-model="selectedType" @click="convert()" checked/>                                    <i class="mdui-radio-icon"></i>Unicode编码<span class="x-ps">(\u开头)</span></label>                            </div>                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="uniDecode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>Unicode解码<span class="x-ps">(\u开头)</span></label>                            </div>                        </div>                        <div class="mdui-col-xs-2">                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="utf8Encode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>URLEncode<span class="x-ps">(%开头)</span></label>                            </div>                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="utf8Decode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>URLDecode<span class="x-ps">(%开头)</span></label>                            </div>                        </div>                        <div class="mdui-col-xs-2">                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="utf16Encode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>UTF16编码<span class="x-ps">(\x开头)</span></label>                            </div>                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="utf16Decode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>UTF16解码<span class="x-ps">(\x开头)</span></label>                            </div>                        </div>                        <div class="mdui-col-xs-2">                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="base64Encode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>Base64编码</label>                            </div>                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="base64Decode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>Base64解码</label>                            </div>                        </div>                        <div class="mdui-col-xs-2">                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="hexEncode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>Hex编码</label>                            </div>                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="hexDecode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>Hex解码</label>                            </div>                        </div>                        <div class="mdui-col-xs-2">                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="gzipEncode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>Gzip压缩</label>                            </div>                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="gzipDecode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>Gzip解压</label>                            </div>                        </div>                        <div class="mdui-col-xs-2">                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="md5Encode"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>MD5计算</label>                            </div>                            <div class="mdui-col">                                <label class="mdui-radio"><input type="radio" name="codeType" value="html2js"                                                                 v-model="selectedType" @click="convert()"/>                                    <i class="mdui-radio-icon"></i>HTML转JS</label>                            </div>                        </div>                    </div>                    <div id="rst" class="row" v-show="resultContent.length > 0">                        <div class="mdui-textfield">                        <textarea class="mdui-textfield-input" rows="10" id="rstCode" ref="rstCode"                                  v-model="resultContent" @mouseover="getResult()"></textarea>                        </div>                    </div>                </div>            </div>        </div>        <script type="text/javascript" src="index.js"></script>    </div>    <div class="mdui-color-theme doc-footer-nav">        <footer>            <div class="footer-icons mdui-col-xs-3 mdui-valign">                <div class="mdui-center">                    <a href="mailto:i@zjun.info" class="mdui-btn mdui-btn-icon mdui-ripple"                       mdui-tooltip="{content: '邮箱'}" target="_blank"><i                            class="mdui-icon fa fa-envelope-square"></i></a>                    <a href="https://github.com/z1un" class="mdui-btn mdui-btn-icon mdui-ripple"                       mdui-tooltip="{content: 'GitHub'}" target="_blank"><i                            class="mdui-icon fa fa-github"></i></a>                    <a href="https://twitter.com/zjuninfo" class="mdui-btn mdui-btn-icon mdui-ripple"                       mdui-tooltip="{content: 'Twitter'}" target="_blank"><i                            class="mdui-icon fa fa-twitter"></i></a>                    <a href="https://blog.zjun.info" class="mdui-btn mdui-btn-icon mdui-ripple"                       mdui-tooltip="{content: 'Blog'}" target="_blank"><i                            class="mdui-icon fa fa-book"></i></a>                </div>            </div>            <div class="footer-copyright mdui-col-xs-6 mdui-valign">                <div class="mdui-center">Copyright © 2021 <a href="https://www.zjun.info/" target="_blank">ZJUN</a>                </div>            </div>            <div class="footer-credit mdui-col-xs-3 mdui-valign">                <div class="mdui-center">                    <div><a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备20009085号</a></div>                    <div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010802000845"                            target="_blank">川公网安备51010802000845号</a>                    </div>                </div>            </div>        </footer>    </div></div>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>编码转换 - Online Tools</title>
+    <link rel="stylesheet" href="/css/mdui.min.css"/>
+    <link rel="stylesheet" href="/css/docs.min.css"/>
+    <link rel="stylesheet" href="/css/materiality.min.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/en-decode/index.css"/>
+    <script type="text/javascript" src="/js/vue.js"></script>
+    <script src="/js/require.js"></script>
+    <script src="/js/mdui.min.js"></script>
+    <script src="/js/darkmode.min.js"></script>
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-192868662-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-192868662-2');
+</script>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar  mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-light">
+<header class="mdui-appbar mdui-appbar-fixed">
+    <div class="mdui-toolbar mdui-color-theme">
+        <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+              mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon fa fa-bars"></i></span>
+        <a href="https://www.zjun.info" class="mdui-typo-headline mdui-hidden-xs">ZJUN</a>
+        <a href="/" class="mdui-typo-title">online tools</a>
+        <div class="mdui-toolbar-spacer"></div>
+        <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" id="dark_toggle_btn"
+              mdui-tooltip="{content: '暗色模式'}" onclick="toggleDark()"><i class="mdui-icon fa fa-adjust"
+                                                                         id="dark_toggle_icon"></i></span>
+        <a href="https://github.com/z1un" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+           mdui-tooltip="{content: 'Github'}"><i class="mdui-icon fa fa-github"></i>
+            <a href="https://www.zjun.info" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+               mdui-tooltip="{content: 'ZJUN'}"><i class="mdui-icon fa fa-user-circle-o"></i>
+
+            </a>
+        </a>
+    </div>
+</header>
+
+<style>
+    .mdui-row > [class*="mdui-col-"] {
+        padding-top: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 8px;
+    }
+
+    .mdui-col-xs-2 {
+        width: auto
+    }
+</style>
+
+
+<div class="mdui-drawer" id="main-drawer">
+    <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
+        <div class="mdui-collapse-item mdui-collapse-item-open">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon mdui-text-color-blue fa fa-briefcase"></i>
+                <div class="mdui-list-item-content">前端工具</div>
+                <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+                <a href="/en-decode/" class="mdui-list-item mdui-ripple mdui-list-item-active">编码转换</a>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+                <a href="/code-beautify" class="mdui-list-item mdui-ripple">代码美化</a>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+                <a href="/image-base64" class="mdui-list-item mdui-ripple">图片-Base64</a>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+                <a href="/qr-code" class="mdui-list-item mdui-ripple">二维码生成</a>
+            </div>
+        </div>
+
+        <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon mdui-text-color-green fa fa-cube"></i>
+                <div class="mdui-list-item-content">安全工具</div>
+                <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+                <a href="/googlehacking" class="mdui-list-item mdui-ripple ">Google Hacking</a>
+                <a href="/getav" class="mdui-list-item mdui-ripple ">Windows杀软识别</a>
+                <a href="/getmskb" class="mdui-list-item mdui-ripple ">Winodws提权辅助</a>
+            </div>
+        </div>
+        <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon mdui-text-color-brown fa fa-font-awesome"></i>
+                <div class="mdui-list-item-content">特别感谢</div>
+                <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>
+            </div>
+            <div class="mdui-collapse-item-body">
+                <a href="https://github.com/r00tSe7en/GoogleHackingTool" class="mdui-list-item mdui-ripple"
+                   target="_blank">GoogleHackingTool</a>
+                <a href="https://github.com/r00tSe7en/get_AV" class="mdui-list-item mdui-ripple"
+                   target="_blank">get_AV</a>
+                <a href="https://github.com/gh0stkey/peAssist" class="mdui-list-item mdui-ripple" target="_blank">peAssist</a>
+                <a href="https://github.com/gh0stkey/avList" class="mdui-list-item mdui-ripple"
+                   target="_blank">avList</a>
+                <a href="https://github.com/zxlie/FeHelper" class="mdui-list-item mdui-ripple"
+                   target="_blank">FeHelper</a>
+                <a href="https://www.mdui.org" target="_blank" class="mdui-list-item mdui-ripple">MDUI</a>
+                <a href="https://github.com/EAimTY/materiality-typecho-theme"
+                   target="_blank" class="mdui-list-item mdui-ripple">materiality-typecho-theme</a>
+            </div>
+        </div>
+        <div class="mdui-collapse-item">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon mdui-text-color-deep-orange fa fa-link"></i>
+                <div class="mdui-list-item-content">友情链接</div>
+                <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>
+            </div>
+            <div class="mdui-collapse-item-body">
+                <a href="https://www.zjun.info" class="mdui-list-item mdui-ripple" target="_blank">zjun</a>
+                <a href="https://blog.zjun.info" class="mdui-list-item mdui-ripple" target="_blank">zjun's blog</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="page-content">
+    <div class="mdui-container" id="main">
+        <div class="mdui-typo">
+            <center><h1>编码转换</h1></center>
+        </div>
+        <div class="wrapper" id="pageContainer">
+            <div class="panel-body mod-endecode">
+                <div class="mdui-row">
+                    <div class="mdui-textfield">
+                    <textarea class="mdui-textfield-input" rows="8" id="srcText" ref="srcText" v-model="sourceContent"
+                              placeholder="粘贴需要进行转换的字符串"></textarea>
+                    </div>
+                    <br>
+                    <input id="btnCodeClear" class="mdui-btn mdui-color-theme-accent mdui-ripple" type="button"
+                           value="清空" @click="clear()">
+                    <input id="btnCodeChange" class="mdui-btn mdui-color-theme-accent mdui-ripple" type="button"
+                           value="转换" @click="convert()">
+                    <div class="mdui-row">
+                        <div class="mdui-col-xs-2">
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="uniEncode"
+                                                                 v-model="selectedType" @click="convert()" checked/>
+                                    <i class="mdui-radio-icon"></i>Unicode编码<span class="x-ps">(\u开头)</span></label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="uniDecode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>Unicode解码<span class="x-ps">(\u开头)</span></label>
+                            </div>
+                        </div>
+
+                        <div class="mdui-col-xs-2">
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="utf8Encode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>URLEncode<span class="x-ps">(%开头)</span></label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="utf8Decode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>URLDecode<span class="x-ps">(%开头)</span></label>
+                            </div>
+                        </div>
+
+                        <div class="mdui-col-xs-2">
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="utf16Encode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>UTF16编码<span class="x-ps">(\x开头)</span></label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="utf16Decode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>UTF16解码<span class="x-ps">(\x开头)</span></label>
+                            </div>
+                        </div>
+
+                        <div class="mdui-col-xs-2">
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="base64Encode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>Base64编码</label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="base64Decode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>Base64解码</label>
+                            </div>
+                        </div>
+
+                        <div class="mdui-col-xs-2">
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="hexEncode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>Hex编码</label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="hexDecode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>Hex解码</label>
+                            </div>
+                        </div>
+
+                        <div class="mdui-col-xs-2">
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="gzipEncode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>Gzip压缩</label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="gzipDecode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>Gzip解压</label>
+                            </div>
+                        </div>
+
+                        <div class="mdui-col-xs-2">
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="md5Encode"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>MD5计算</label>
+                            </div>
+                            <div class="mdui-col">
+                                <label class="mdui-radio"><input type="radio" name="codeType" value="html2js"
+                                                                 v-model="selectedType" @click="convert()"/>
+                                    <i class="mdui-radio-icon"></i>HTML转JS</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="rst" class="row" v-show="resultContent.length > 0">
+                        <div class="mdui-textfield">
+                        <textarea class="mdui-textfield-input" rows="10" id="rstCode" ref="rstCode"
+                                  v-model="resultContent" @mouseover="getResult()"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="index.js"></script>
+    </div>
+
+
+    <div class="mdui-color-theme doc-footer-nav">
+        <footer>
+            <div class="footer-icons mdui-col-xs-3 mdui-valign">
+                <div class="mdui-center">
+                    <a href="mailto:i@zjun.info" class="mdui-btn mdui-btn-icon mdui-ripple"
+                       mdui-tooltip="{content: '邮箱'}" target="_blank"><i
+                            class="mdui-icon fa fa-envelope-square"></i></a>
+                    <a href="https://github.com/z1un" class="mdui-btn mdui-btn-icon mdui-ripple"
+                       mdui-tooltip="{content: 'GitHub'}" target="_blank"><i
+                            class="mdui-icon fa fa-github"></i></a>
+                    <a href="https://twitter.com/zjuninfo" class="mdui-btn mdui-btn-icon mdui-ripple"
+                       mdui-tooltip="{content: 'Twitter'}" target="_blank"><i
+                            class="mdui-icon fa fa-twitter"></i></a>
+                    <a href="https://blog.zjun.info" class="mdui-btn mdui-btn-icon mdui-ripple"
+                       mdui-tooltip="{content: 'Blog'}" target="_blank"><i
+                            class="mdui-icon fa fa-book"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright mdui-col-xs-6 mdui-valign">
+                <div class="mdui-center">Copyright © 2021 <a href="https://www.zjun.info/" target="_blank">ZJUN</a>
+                </div>
+            </div>
+            <div class="footer-credit mdui-col-xs-3 mdui-valign">
+                <div class="mdui-center">
+                    <div><a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备20009085号</a></div>
+                    <div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51010802000845"
+                            target="_blank">川公网安备51010802000845号</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>

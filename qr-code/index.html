@@ -3,14 +3,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>二维码生成 - Online Tools</title>
-    <link rel="stylesheet" href="../css/mdui.min.css"/>
-    <link rel="stylesheet" href="../css/docs.min.css"/>
-    <link rel="stylesheet" href="../css/materiality.min.css"/>
-    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
-    <script type="text/javascript" src="../js/vue.js"></script>
-    <script src="../js/require.js"></script>
-    <script src="../js/mdui.min.js"></script>
-    <script src="../js/darkmode.min.js"></script>
+    <link rel="stylesheet" href="/css/mdui.min.css"/>
+    <link rel="stylesheet" href="/css/docs.min.css"/>
+    <link rel="stylesheet" href="/css/materiality.min.css"/>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="/js/vue.js"></script>
+    <script src="/js/require.js"></script>
+    <script src="/js/mdui.min.js"></script>
+    <script src="/js/darkmode.min.js"></script>
     <link rel="stylesheet" href="/qr-code/index.css"/>
     <script type="text/javascript" src="/qr-code/jquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="/qr-code/jquery/jquery.colorpicker.js"></script>
@@ -44,7 +44,7 @@
         <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
               mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon fa fa-bars"></i></span>
         <a href="https://www.zjun.info" class="mdui-typo-headline mdui-hidden-xs">ZJUN</a>
-        <a href="../" class="mdui-typo-title">online tools</a>
+        <a href="/" class="mdui-typo-title">online tools</a>
         <div class="mdui-toolbar-spacer"></div>
         <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" id="dark_toggle_btn"
               mdui-tooltip="{content: '暗色模式'}" onclick="toggleDark()"><i class="mdui-icon fa fa-adjust"
@@ -67,16 +67,16 @@
                 <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
-                <a href="../en-decode" class="mdui-list-item mdui-ripple">编码转换</a>
+                <a href="/en-decode" class="mdui-list-item mdui-ripple">编码转换</a>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
-                <a href="../code-beautify" class="mdui-list-item mdui-ripple">代码美化</a>
+                <a href="/code-beautify" class="mdui-list-item mdui-ripple">代码美化</a>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
-                <a href="../image-base64" class="mdui-list-item mdui-ripple">图片-Base64</a>
+                <a href="/image-base64" class="mdui-list-item mdui-ripple">图片-Base64</a>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
-                <a href="./" class="mdui-list-item mdui-ripple mdui-list-item-active">二维码生成</a>
+                <a href="/qr-code/" class="mdui-list-item mdui-ripple mdui-list-item-active">二维码生成</a>
             </div>
         </div>
 
@@ -87,9 +87,9 @@
                 <i class="mdui-collapse-item-arrow mdui-icon fa fa-angle-down"></i>
             </div>
             <div class="mdui-collapse-item-body mdui-list">
-                <a href="../googlehacking" class="mdui-list-item mdui-ripple ">Google Hacking</a>
-                <a href="../getav" class="mdui-list-item mdui-ripple ">Windows杀软识别</a>
-                <a href="../getmskb" class="mdui-list-item mdui-ripple ">Winodws提权辅助</a>
+                <a href="/googlehacking" class="mdui-list-item mdui-ripple ">Google Hacking</a>
+                <a href="/getav" class="mdui-list-item mdui-ripple ">Windows杀软识别</a>
+                <a href="/getmskb" class="mdui-list-item mdui-ripple ">Winodws提权辅助</a>
             </div>
         </div>
         <div class="mdui-collapse-item ">
@@ -177,8 +177,8 @@
             </div>
 
             <div class="x-logo">
-                <img src="../favicon.ico" alt="#" id="logo_default" ref="logoDefault"/>
-                <img src="../favicon.ico" alt="#" id="logo" ref="logoCustom"/>
+                <img src="/favicon.ico" alt="#" id="logo_default" ref="logoDefault"/>
+                <img src="/favicon.ico" alt="#" id="logo" ref="logoCustom"/>
                 <form action="#">
                     <input type="file" id="file" ref="fileBox" accept=".jpg,.jpeg,.gif,.png,.bmp"
                            @change="fileChanged($event)">
