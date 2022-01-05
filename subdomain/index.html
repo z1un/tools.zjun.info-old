@@ -3,18 +3,51 @@
 	<head>
 		<title>在线子域名查询</title>
 		<meta charset="utf-8">
+        <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 
-	<script>
-	var httpRequest = new XMLHttpRequest();
-        httpRequest.open('GET', 'https://zjun.info', true);
-        httpRequest.send();
-        httpRequest.onreadystatechange = function () {
-            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-                document.write(httpRequest.responseText);
-            }
-        };
-	</script>
+    <body>
 
-本工具仅用于学习研究使用，请勿用作非法用途，否则后果一切自负
+        本工具仅用于学习研究使用，请勿用作非法用途，否则后果一切自负！<br><br>
+        vercel 跨域问题：<br>
+        指定允许其他域名访问<br>
+        'Access-Control-Allow-Origin:*'<br>
+        响应类型<br>
+        'Access-Control-Allow-Methods:GET,POST'<br>
+        响应头设置<br>
+        'Access-Control-Allow-Headers:x-requested-with,content-type' <br><br>
+
+        例：zjun.info<br><br>
+
+        域名：<input type="text" id="domain">
+        <button>开始</button>
+        <div id="info"></div>
+    </body>
+
+	<script>
+        var dist = [""];
+        var num = 0;
+		var domain = "";
+        $("button").click(function() {
+			num = 0;
+			domain = 'https://'+dist[num]+$("#domain").val();
+			query();
+		});
+
+        function query() {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.open('GET', domain, true);
+            httpRequest.send();
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4 && httpRequest.status == 200||httpRequest.status == 404) {
+                    var str = httpRequest.responseText;
+                    $("#info").append('查询成功：<a href="' + domain + '" target="_blank">' + domain+'</a> - title: ' +str.match(/<title>(.*?)<\/title>/)[1]+ "<br>");
+                };
+            };
+			num++;
+			if(num<1) {
+				query();
+			}
+        }
+	</script>
 </html>

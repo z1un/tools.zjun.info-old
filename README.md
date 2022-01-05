@@ -24,3 +24,6 @@
 - [FeHelper](https://github.com/zxlie/FeHelper)
 - [MDUI](https://www.mdui.org/)
 - [materiality-typecho-theme](https://github.com/EAimTY/materiality-typecho-theme)
+
+## 待解决
+子域爆破的跨域问题，vercel支持跨域访问，等有时间再看。
