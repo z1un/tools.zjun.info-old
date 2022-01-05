@@ -26,7 +26,7 @@ new Vue({
         convert: function () {
             this.$nextTick(() => {
 
-                let tools = Tarp.require('./endecode-lib');
+                let tools = Tarp.require('/en-decode/endecode-lib');
 
                 if (this.selectedType === 'uniEncode') {
 
